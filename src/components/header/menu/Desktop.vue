@@ -2,7 +2,7 @@
   <div class="absolute pin px-4 md:px-8 hidden sm:flex bg-theme-nav-background xl:rounded-r-md">
     <button
       @click="closeMenu"
-      class='px-4 py-3 md:py-6 flex-none flex items-center border-b-2 margin-t-2 mr-3 border-transparent hover:border-red text-theme-text-secondary'>
+      class='px-4 py-3 md:py-6 flex-none flex items-center border-b-2 margin-t-2 mr-3 border-transparent text-theme-text-secondary genki-border-blue'>
       <!-- Inline this SVG so we can change color dynamically -->
       <svg
         class="flex-none fill-current"
@@ -13,19 +13,19 @@
       </svg>
     </button>
 
-    <router-link @click.native="closeMenu" :to="{ name: 'home' }" tag="button" class="menu-button genki-menu-button">
+    <router-link @click.native="closeMenu" :to="{ name: 'home' }" tag="button" class="menu-button genki-menu-button genki-border-blue">
       <img src="@/assets/images/icons/web-page-home.svg" class="genki-menu-button-img"/>
       {{ $t("Home") }}
     </router-link>
-    <router-link @click.native="closeMenu" :to="{ name: 'top-wallets', params: { page: 1 } }" tag="button" class="menu-button genki-menu-button">
+    <router-link @click.native="closeMenu" :to="{ name: 'top-wallets', params: { page: 1 } }" tag="button" class="menu-button genki-menu-button genki-border-blue">
       <img src="@/assets/images/icons/starred-badge.svg" class="genki-menu-button-img"/>
       {{ $t("Top Wallets") }}
     </router-link>
-    <router-link @click.native="closeMenu" :to="{ name: 'delegate-monitor' }" tag="button" class="menu-button genki-menu-button">
+    <router-link @click.native="closeMenu" :to="{ name: 'delegate-monitor' }" tag="button" class="menu-button genki-menu-button genki-border-blue">
       <img src="@/assets/images/icons/monitoring.svg" class="genki-menu-button-img"/>
       {{ $t("Delegate Monitor") }}
     </router-link>
-    <a href="https://wallet.ki" class="menu-button genki-menu-button" target="_blank">
+    <a href="https://wallet.ki" class="menu-button genki-menu-button genki-border-blue" target="_blank">
       <img src="@/assets/images/icons/wallet.svg" class="genki-menu-button-img"/>
       <span class="mr-2">Wallet</span>
     </a>

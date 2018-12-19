@@ -1,7 +1,8 @@
 <template>
   <footer class="max-w-2xl mx-auto px-5 md:px-10 py-8 text-theme-text-tertiary flex flex-col lg:flex-row flex-wrap justify-between items-center">
     <div class="mb-4 lg:mb-0 text-center md:text-left">
-      <span class="block md:inline-block mb-4 md:mb-0 text-center">&copy; <a href="https://ark.io" target="_blank">Ark.io</a> | {{ year }}. {{ $t("All rights reserved") }}</span> <div class="block md:inline-block"><span class="hidden md:inline-block"> | </span> <span>{{ $t("Version") }}: <a :href="versionLink" target="_blank">{{ version }}</a> | {{ $t("Date") }}: {{ date }}</span></div>
+      <!-- <span class="block md:inline-block mb-4 md:mb-0 text-center">&copy; <a href="https://ark.io" target="_blank">Ark.io</a> | {{ year }}. {{ $t("All rights reserved") }}</span> <div class="block md:inline-block"><span class="hidden md:inline-block"> | </span> <span>{{ $t("Version") }}: <a :href="versionLink" target="_blank">{{ version }}</a> | {{ $t("Date") }}: {{ date }}</span></div> -->
+      <span class="block md:inline-block mb-4 md:mb-0 text-center">&copy; <a href="https://gen.ki" target="_blank">Gen.ki</a> | {{ year }}. {{ $t("All rights reserved") }}</span> <div class="block md:inline-block"><span class="hidden md:inline-block"> | </span> <span>{{ $t("Version") }}: <a :href="versionLink" target="_blank">0.1.0</a> | {{ $t("Date") }}: {{ date }}</span></div>
     </div>
     <div class="text-center">
       <a href="https://www.facebook.com/arkecosystem" target="_blank">
@@ -15,7 +16,7 @@
         </svg>
       </a>
 
-      <a href="https://twitter.com/ArkEcosystem" target="_blank">
+      <a href="https://twitter.com/JoinGenki" target="_blank">
         <svg
           viewBox="0 0 24 24"
           class="m-2"
@@ -26,18 +27,7 @@
         </svg>
       </a>
 
-      <a href="https://www.youtube.com/channel/UCpc2k6zOOutGT9y56urDClg" target="_blank">
-        <svg
-          viewBox="0 0 24 24"
-          class="m-2"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          width="16px" height="16px">
-          <path fill-rule="evenodd" fill="currentColor" d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
-        </svg>
-      </a>
-
-      <a href="mailto:info@ark.io" target="_blank">
+      <a href="mailto:contact@gen.ki" target="_blank">
         <svg
           viewBox="0 0 24 24"
           class="m-2"
@@ -48,7 +38,7 @@
         </svg>
       </a>
 
-      <a href="https://telegram.me/ArkEcosystem" target="_blank">
+      <a href="https://t.me/HeyGenki" target="_blank">
         <svg
           viewBox="0 0 14 14"
           class="m-2"
@@ -59,7 +49,7 @@
         </svg>
       </a>
 
-      <a href="https://www.reddit.com/r/arkecosystem" target="_blank">
+      <a href="https://www.reddit.com/user/heygenki" target="_blank">
         <svg
           viewBox="0 0 17 17"
           class="m-2"
@@ -70,7 +60,7 @@
         </svg>
       </a>
 
-      <a href="https://github.com/ArkEcosystem" target="_blank">
+      <a href="https://github.com/GetGenki" target="_blank">
         <svg
           viewBox="0 0 24 24"
           class="m-2"
@@ -81,7 +71,7 @@
         </svg>
       </a>
 
-      <a href="https://bitcointalk.org/index.php?topic=1649695.0" target="_blank">
+      <!-- <a href="https://bitcointalk.org/index.php?topic=1649695.0" target="_blank">
         <svg
           viewBox="0 0 24 24"
           class="m-2"
@@ -90,9 +80,9 @@
           width="16px" height="16px">
           <path fill-rule="evenodd" fill="currentColor" d="M23.638 14.904c-1.602 6.43-8.113 10.34-14.542 8.736C2.67 22.05-1.244 15.525.362 9.105 1.962 2.67 8.475-1.243 14.9.358c6.43 1.605 10.342 8.115 8.738 14.548v-.002zm-6.35-4.613c.24-1.59-.974-2.45-2.64-3.03l.54-2.153-1.315-.33-.525 2.107c-.345-.087-.705-.167-1.064-.25l.526-2.127-1.32-.33-.54 2.165c-.285-.067-.565-.132-.84-.2l-1.815-.45-.35 1.407s.975.225.955.236c.535.136.63.486.615.766l-1.477 5.92c-.075.166-.24.406-.614.314.015.02-.96-.24-.96-.24l-.66 1.51 1.71.426.93.242-.54 2.19 1.32.327.54-2.17c.36.1.705.19 1.05.273l-.51 2.154 1.32.33.545-2.19c2.24.427 3.93.257 4.64-1.774.57-1.637-.03-2.58-1.217-3.196.854-.193 1.5-.76 1.68-1.93h.01zm-3.01 4.22c-.404 1.64-3.157.75-4.05.53l.72-2.9c.896.23 3.757.67 3.33 2.37zm.41-4.24c-.37 1.49-2.662.735-3.405.55l.654-2.64c.744.18 3.137.524 2.75 2.084v.006z"/>
         </svg>
-      </a>
+      </a> -->
 
-      <a href="https://ark.io/slack" target="_blank">
+      <!-- <a href="https://ark.io/slack" target="_blank">
         <svg
           viewBox="0 0 24 24"
           class="m-2"
@@ -101,9 +91,9 @@
           width="16px" height="16px">
           <path fill-rule="evenodd" fill="currentColor" d="M9.879 10.995l1.035 3.085 3.205-1.074-1.035-3.074-3.205 1.08v-.017z"/><path fill-rule="evenodd" fill="currentColor" d="M18.824 14.055l-1.555.521.54 1.61c.218.65-.135 1.355-.786 1.574-.15.045-.285.067-.435.063-.511-.015-.976-.338-1.155-.849l-.54-1.607-3.21 1.073.539 1.608c.211.652-.135 1.358-.794 1.575-.15.048-.285.067-.435.064-.51-.015-.976-.34-1.156-.85l-.539-1.619-1.561.524c-.15.045-.285.061-.435.061-.511-.016-.976-.345-1.155-.855-.225-.66.135-1.364.78-1.575l1.56-.525L7.5 11.76l-1.551.525c-.141.048-.285.066-.428.064-.495-.016-.975-.338-1.141-.848-.209-.65.135-1.354.796-1.574l1.56-.52-.54-1.605c-.21-.654.136-1.359.796-1.575.659-.22 1.363.136 1.574.783l.539 1.608L12.3 7.544l-.54-1.605c-.209-.645.135-1.35.789-1.574.652-.211 1.359.135 1.575.791l.54 1.621 1.555-.51c.651-.219 1.356.135 1.575.779.218.654-.135 1.359-.784 1.575l-1.557.524 1.035 3.086 1.551-.516c.652-.211 1.358.135 1.575.795.22.66-.135 1.365-.779 1.574l-.011-.029zm4.171-5.356C20.52.456 16.946-1.471 8.699 1.005.456 3.479-1.471 7.051 1.005 15.301c2.475 8.245 6.046 10.17 14.296 7.694 8.245-2.475 10.17-6.046 7.694-14.296z"/>
         </svg>
-      </a>
+      </a> -->
 
-      <a href="https://ark.io/discord" target="_blank">
+      <!-- <a href="https://ark.io/discord" target="_blank">
         <svg
           viewBox="0 0 24 24"
           class="m-2"
@@ -111,9 +101,9 @@
           width="16px" height="16px">
           <path fille-rule="evenodd" fill="currentColor" d="M20.222 0c1.406 0 2.54 1.137 2.607 2.475V24l-2.677-2.273-1.47-1.338-1.604-1.398.67 2.205H3.71c-1.402 0-2.54-1.065-2.54-2.476V2.48C1.17 1.142 2.31.003 3.715.003h16.5L20.222 0zm-6.118 5.683h-.03l-.202.2c2.073.6 3.076 1.537 3.076 1.537-1.336-.668-2.54-1.002-3.744-1.137-.87-.135-1.74-.064-2.475 0h-.2c-.47 0-1.47.2-2.81.735-.467.203-.735.336-.735.336s1.002-1.002 3.21-1.537l-.135-.135s-1.672-.064-3.477 1.27c0 0-1.805 3.144-1.805 7.02 0 0 1 1.74 3.743 1.806 0 0 .4-.533.805-1.002-1.54-.468-2.14-1.404-2.14-1.404s.134.066.335.2h.06c.03 0 .044.015.06.03v.006c.016.016.03.03.06.03.33.136.66.27.93.4.466.202 1.065.403 1.8.536.93.135 1.996.2 3.21 0 .6-.135 1.2-.267 1.8-.535.39-.2.87-.4 1.397-.737 0 0-.6.936-2.205 1.404.33.466.795 1 .795 1 2.744-.06 3.81-1.8 3.87-1.726 0-3.87-1.815-7.02-1.815-7.02-1.635-1.214-3.165-1.26-3.435-1.26l.056-.02zm.168 4.413c.703 0 1.27.6 1.27 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334.002-.74.573-1.338 1.27-1.338zm-4.543 0c.7 0 1.266.6 1.266 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334 0-.74.57-1.338 1.27-1.338z"/>
         </svg>
-      </a>
+      </a> -->
 
-      <a href="https://gitter.im/ark-developers/Lobby" target="_blank">
+      <!-- <a href="https://gitter.im/ark-developers/Lobby" target="_blank">
         <svg
           viewBox="0 0 24 24"
           class="m-2"
@@ -122,9 +112,9 @@
           width="16px" height="16px">
           <path fill-rule="evenodd" fill="currentColor" d="M8.501 4.001H10.5V24H8.501V4.001zm6.999 0V24h-2V4.001h2zM3.5 0h2.001v15H3.5V0zm15 4.001h2V15h-2V4.001z" />
         </svg>
-      </a>
+      </a> -->
 
-      <a href="https://steemit.com/@arkecosystem" target="_blank">
+      <!-- <a href="https://steemit.com/@arkecosystem" target="_blank">
         <svg
           viewBox="0 0 24 24"
           class="m-2"
@@ -133,9 +123,9 @@
           width="16px" height="16px">
           <path fill-rule="evenodd" fill="currentColor" d="M3.927 2.596c.264.045-.397 1.778-.028 3.76.318 1.697 4.313 8.275 4.148 10.529-.128 1.418-3.408 4.74-3.753 4.52-.377-.105.996-2.361.486-4.244C4.19 14.97.673 9.301.677 6.798c0-1.832 3.011-4.32 3.25-4.202zM11.44.005c.336.058-.506 2.271-.034 4.791.405 2.17 5.501 10.555 5.292 13.432-.166 1.809-4.348 6.043-4.789 5.76-.479-.131 1.271-3.008.622-5.406-.755-2.796-5.238-10.026-5.235-13.218 0-2.338 3.842-5.509 4.144-5.359zm7.754 2.591c.27.045-.393 1.778-.023 3.761.318 1.697 4.313 8.275 4.148 10.529-.125 1.418-3.408 4.74-3.754 4.52-.377-.105.996-2.361.488-4.244-.594-2.192-4.11-7.861-4.105-10.363 0-1.832 3.014-4.32 3.248-4.202h-.002z" />
         </svg>
-      </a>
+      </a> -->
 
-      <a href="https://blog.ark.io" target="_blank">
+      <a href="https://medium.com/@genki" target="_blank">
         <svg
           viewBox="0 0 24 24"
           class="m-2"
