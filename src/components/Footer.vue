@@ -5,7 +5,7 @@
       <span class="block md:inline-block mb-4 md:mb-0 text-center">&copy; <a href="https://gen.ki" target="_blank">Gen.ki</a> | {{ year }}. {{ $t("All rights reserved") }}</span> <div class="block md:inline-block"><span class="hidden md:inline-block"> | </span> <span>{{ $t("Version") }}: <a :href="versionLink" target="_blank">0.1.0</a> | {{ $t("Date") }}: {{ date }}</span></div>
     </div>
     <div class="text-center">
-      <a href="https://www.facebook.com/arkecosystem" target="_blank">
+      <a href="https://www.facebook.com/getgenki/" target="_blank">
         <svg
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
