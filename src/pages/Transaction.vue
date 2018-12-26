@@ -58,10 +58,10 @@
           <div>{{ readableTimestamp(transaction.timestamp) }}</div>
         </div>
 
-        <div class="list-row-border-b-no-wrap" v-if="transaction.vendorField">
+        <!-- <div class="list-row-border-b-no-wrap" v-if="transaction.vendorField">
           <div class="mr-4">{{ $t("Smartbridge") }}</div>
           <div class="text-right">{{ emojify(transaction.vendorField) }}</div>
-        </div>
+        </div> -->
 
         <div class="list-row" v-if="transaction.blockid">
           <div>{{ $t("Block") }}</div>

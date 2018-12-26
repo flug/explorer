@@ -25,11 +25,11 @@
         </template>
       </table-column>
 
-      <table-column show="vendorField" :label="$t('Smartbridge')" header-class="right-header-cell hidden lg:table-cell" cell-class="right-cell hidden lg:table-cell">
+      <!-- <table-column show="vendorField" :label="$t('Smartbridge')" header-class="right-header-cell hidden lg:table-cell" cell-class="right-cell hidden lg:table-cell">
         <template slot-scope="row">
           {{ truncate(emojify(row.vendorField) || '', 35, 'right') }}
         </template>
-      </table-column>
+      </table-column> -->
 
       <table-column show="amount" :label="$t('Amount (token)', { token: networkToken() })" header-class="right-header-end-cell lg:pr-4" cell-class="right-end-cell lg:pr-4">
         <template slot-scope="row">
