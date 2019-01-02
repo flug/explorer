@@ -126,10 +126,11 @@ const methods = {
       'ARK': 'Ѧ',
       'BTC': 'Ƀ',
       'ETH': 'Ξ',
-      'LTC': 'Ł'
+      'LTC': 'Ł',
+      'KI': 'Ҝ'
     }
 
-    return [store.getters['network/token'], 'BTC', 'ETH', 'LTC'].some(
+    return [store.getters['network/token'], 'BTC', 'ETH', 'LTC', 'KI'].some(
       c => currencyName.indexOf(c) > -1
     )
       ? `${value.toLocaleString(locale, {
