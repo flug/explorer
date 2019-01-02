@@ -1,0 +1,15 @@
+{
+    "title": "Kinet Explorer",
+    "server": "http://167.114.236.26:4003/api",
+    "alias": "KINET",
+    "activeDelegates": 51,
+    "rewardOffset": 75600,
+    "currencies": [],
+    "knownWallets": {},
+    "defaults": {
+        "currency": null
+    },
+    "config": {
+        "priceChart": false
+    }
+}
