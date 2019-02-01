@@ -2,6 +2,7 @@
   "Height": "Altura",
   "Network": "Rede",
   "Main": "Mainnet",
+  "Development": "Desenvolvimento",
   "Supply": "Distribuição",
   "Market Cap": "Valor de mercado",
 
@@ -10,6 +11,7 @@
   "Date": "Data",
 
   "No results": "Sem resultados",
+  "This is a verified address": "Este é um endereço confirmado",
 
   "Transaction": "Transação",
   "Transactions": "Transações",
@@ -51,7 +53,7 @@
   "Last forged": "Último bloco forjado",
   "Status": "Status",
   "Productivity": "Produtividade",
-  "Approval": "Aprovação",
+  "Vote %": "% de votos",
   "Delegates": "Delegados",
   "Delegate": "Delegado",
   "Forged block recently": "Bloco forjado recentemente",
@@ -72,6 +74,7 @@
   "Address": "Endereço",
   "Public key": "Public key",
   "Balance (token)": "Balanço ({token})",
+  "Voting for": "Votos para",
   "Copied!": "Copiado!",
   "Error!": "Erro!",
   "Copy to clipboard": "Copiar para a Área de Transferência",
@@ -88,7 +91,7 @@
   "All": "Todos",
   "Sent": "Enviado",
   "Received": "Recebido",
-  "Second Signature enabled": "Senha Secundária ativada",
+  "Second signature enabled": "Senha Secundária ativada",
 
   "Previous": "Anterior",
   "Next": "Próximo",
@@ -107,6 +110,9 @@
 
   "Ooops!": "Ooops!",
   "Sorry, page not found": "Desculpe, página não encontrada",
+  "Sorry, dataType dataId could not be found on the blockchain": "Desculpe, {dataType} <b>{dataId}</b> não foi encontrado no blockchain",
+  "Reload this page": "Atualize esta página",
+  "Loading...": "Carregando...",
   "Active": "Ativo",
   "Standby": "Em Espera",
   "Latest transactions and blocks": "Últimas transações e blocos",
@@ -119,6 +125,8 @@
   "Vendor field": "Campo do fornecedor",
   "Wallet Summary": "Sumário da carteira",
 
+  "Type": "Tipo",
+  "Transaction type": "Tipo de transação",
   "2nd Signature Registration": "Registro de Senha Secundária",
   "Delegate Registration": "Registro de Delegado",
   "Vote": "Voto",
@@ -126,5 +134,7 @@
   "IPFS": "IPFS",
   "Timelock Transfer": "Transferência de Timelock",
   "Multipayment": "Multipagamento",
-  "Delegate Resignation": "Delegate Resignation"
+  "Delegate Resignation": "Delegate Resignation",
+  "Second Signature": "Senha Secundária",
+  "Transfer": "Transferência"
 }

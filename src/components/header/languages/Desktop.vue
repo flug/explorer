@@ -4,7 +4,7 @@
       <img :src="getLanguageFlag(lang)" class="flag-image">
     </button>
 
-    <button @click="$store.dispatch('ui/setHeaderType', null)" class="px-2 close-button">
+    <button @click="$store.dispatch('ui/setHeaderType', null)" class="flex flex-none p-2 close-button">
       <img src="@/assets/images/icons/cross.svg" />
     </button>
   </div>
@@ -20,7 +20,7 @@ export default {
 
     languages() {
       return Object.keys(this.$i18n.messages).filter(
-        l => l != this.language
+        lang => lang !== this.language && lang !== 'en'
       )
     }
   },

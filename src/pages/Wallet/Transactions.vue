@@ -1,8 +1,6 @@
 <template>
   <div class="max-w-2xl mx-auto md:pt-5">
-    <content-header>
-      <span>{{ $t("Transactions") }}</span>
-    </content-header>
+    <content-header>{{ $t("Transactions") }}</content-header>
 
     <section class="mb-5">
       <div class="px-5 sm:px-10 py-8 bg-theme-feature-background flex xl:rounded-lg items-center justify-between">
@@ -131,15 +129,13 @@ export default {
     },
 
     async getSentCount() {
-      const wallet = await WalletService.find(this.address)
-      const response = await TransactionService.sentByAddressCount(wallet.address)
-      this.totalTransactions += Number(response)
+      const count = await TransactionService.sentByAddressCount(this.wallet.address)
+      this.totalTransactions += Number(count)
     },
 
     async getReceivedCount() {
-      const wallet = await WalletService.find(this.address)
-      const received = await TransactionService.receivedByAddressCount(wallet.address)
-      this.totalTransactions += Number(received)
+      const count = await TransactionService.receivedByAddressCount(this.wallet.address)
+      this.totalTransactions += Number(count)
     },
 
     changePage(page) {

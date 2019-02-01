@@ -11,6 +11,7 @@
   "Date": "Date",
 
   "No results": "Pas de résultats",
+  "This is a verified address": "Ceci est une adresse vérifiée",
 
   "Transaction": "Transaction",
   "Transactions": "Transactions",
@@ -52,7 +53,7 @@
   "Last forged": "Dernier forgé",
   "Status": "Statut",
   "Productivity": "Productivité",
-  "Approval": "Approbation",
+  "Vote %": "% de vote",
   "Delegates": "Délégués",
   "Delegate": "Délégué",
   "Forged block recently": "Ont forgé récemment",
@@ -73,6 +74,7 @@
   "Address": "Adresse",
   "Public key": "Clé publique",
   "Balance (token)": "Solde ({token})",
+  "Voting for": "Votes pour",
   "Copied!": "Copié!!",
   "Error!": "Erreur!",
   "Copy to clipboard": "Copier vers le presse-papier",
@@ -89,7 +91,7 @@
   "All": "Tout",
   "Sent": "Envoyé",
   "Received": "Reçu",
-  "Second Signature enabled": "Seconde signature activée",
+  "Second signature enabled": "Seconde signature activée",
 
   "Previous": "Précédent",
   "Next": "Suivant",
@@ -108,6 +110,9 @@
 
   "Ooops!": "Ooops!",
   "Sorry, page not found": "Désolé, page introuvable",
+  "Sorry, dataType dataId could not be found on the blockchain": "Désolé, {dataType} <b>{dataId}</b> n'a pu être trouvé sur la blockchain",
+  "Reload this page": "Actualiser cette page",
+  "Loading...": "Chargement...",
   "Active": "Actif",
   "Standby": "En attente",
   "Latest transactions and blocks": "Dernières transactions et blocs",
@@ -120,6 +125,8 @@
   "Vendor field": "Communication",
   "Wallet summary": "Résumé du portefeuille",
 
+  "Type": "Type",
+  "Transaction type": "Type de transaction",
   "2nd Signature Registration": "Enregistrement de seconde Signature",
   "Delegate Registration": "Inscription de Délégué",
   "Vote": "Vote",
@@ -128,5 +135,7 @@
   "IPFS": "IPFS",
   "Timelock Transfer": "Transfert différé",
   "Multipayment": "Multi-Paiement",
-  "Delegate Resignation": "Résignation de Délégué"
+  "Delegate Resignation": "Résignation de Délégué",
+  "Second Signature": "Deuxième Signature",
+  "Transfer": "Transfert"
 }

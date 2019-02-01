@@ -2,6 +2,7 @@
   "Height": "Hoogte",
   "Network": "Netwerk",
   "Main": "Main",
+  "Development": "Ontwikkeling",
   "Supply": "Voorraad",
   "Market Cap": "Market Cap",
 
@@ -10,6 +11,7 @@
   "Date": "Datum",
 
   "No results": "Geen Resultaten",
+  "This is a verified address": "Dit is een geverifieerd adres",
 
   "Transaction": "Transactie",
   "Transactions": "Transacties",
@@ -51,7 +53,7 @@
   "Last forged": "Laatst Geforged",
   "Status": "Status",
   "Productivity": "Productiviteit",
-  "Approval": "Goedkeuring",
+  "Vote %": "Stem %",
   "Delegates": "Afgevaardigden",
   "Delegate": "Afgevaardigde",
   "Forged block recently": "Recentelijk block geforged",
@@ -72,6 +74,7 @@
   "Address": "Adres",
   "Public key": "Public key",
   "Balance (token)": "Balans ({token})",
+  "Voting for": "Stemt voor",
   "Copied!": "Gekopieerd!",
   "Error!": "Fout!",
   "Copy to clipboard": "Kopieer naar klembord",
@@ -88,7 +91,7 @@
   "All": "Alles",
   "Sent": "Verzonden",
   "Received": "Ontvangen",
-  "Second Signature enabled": "2e Handtekening Ingeschakeld",
+  "Second signature enabled": "2e Handtekening Ingeschakeld",
 
   "Previous": "Vorige",
   "Next": "Volgende",
@@ -107,6 +110,9 @@
 
   "Ooops!": "Oeeps!",
   "Sorry, page not found": "Sorry, pagina niet gevonden",
+  "Sorry, dataType dataId could not be found on the blockchain": "Sorry, {dataType} <b>{dataId}</b> kon niet worden gevonden op de blockchain",
+  "Reload this page": "Ververs deze pagina",
+  "Loading...": "Laadt...",
   "Active": "Actief",
   "Standby": "Standby",
   "Latest transactions and blocks": "Laatste transacties en blocks",
@@ -119,6 +125,8 @@
   "Vendor field": "Verkoper veld",
   "Wallet summary": "Wallet samenvatting",
 
+  "Type": "Type",
+  "Transaction type": "Transactie Type",
   "2nd Signature Registration": "Registratie 2e Handtekening",
   "Delegate Registration": "Registratie Afgevaardigde",
   "Vote": "Stem",
@@ -127,5 +135,7 @@
   "IPFS": "IPFS",
   "Timelock Transfer": "Timelock Transfer",
   "Multipayment": "Multipayment",
-  "Delegate Resignation": "Aftreden Afgevaardigde"
+  "Delegate Resignation": "Aftreden Afgevaardigde",
+  "Second Signature": "Tweede Handtekening",
+  "Transfer": "Transfer"
 }

@@ -11,6 +11,24 @@ class TransactionService {
     return response.data.transactions
   }
 
+  async filterByType(page, type, limit = 25) {
+    const offset = (page > 1) ? (page - 1) * limit : 0
+
+    const params = {
+      limit,
+      offset
+    }
+
+    if (type !== -1) {
+      params.type = type
+    }
+
+    const response = await NodeService.get('transactions', {
+      params: params
+    })
+    return response.data.transactions
+  }
+
   async find(id) {
     const response = await NodeService.get('transactions/get', {
       params: {
