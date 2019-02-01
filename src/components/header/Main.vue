@@ -1,12 +1,13 @@
 <template>
   <header
-    class="header min-h-50px md:min-h-80px z-50 max-w-2xl mx-auto flex bg-theme-nav-background shadow-theme xl:rounded-md mb-5 sm:mb-10">
+    class="header min-h-50px md:min-h-80px z-50 max-w-2xl mx-auto flex bg-theme-nav-background shadow-theme xl:rounded-md mb-5 sm:mb-10"
+    v-click-outside="closeHeader"
+  >
     <router-link
       :to="{ name: 'home' }"
-      class="logo-container w-50px md:w-80px h-50px md:h-80px flex-none bg-blue text-2xl xl:rounded-l-md flex justify-center items-center">
-      <img class="logo max-w-25px md:max-w-25px" src="@/assets/images/ki-logo.png" />
+      class="logo-container w-50px md:w-80px h-50px md:h-80px flex-none text-2xl xl:rounded-l-md flex justify-center items-center bg-blue">
+      <img class="logo max-w-25px md:max-w-38px" src="@/assets/images/logo.png" />
     </router-link>
-
     <div class="w-full relative hidden xl:flex">
       <header-search v-if="headerType === 'search'"></header-search>
 
@@ -58,6 +59,12 @@ export default {
   computed: {
     ...mapGetters('ui', ['headerType', 'menuVisible']),
   },
+
+  methods: {
+    closeHeader () {
+      this.$store.dispatch('ui/setHeaderType', null)
+    }
+  }
 }
 </script>
 

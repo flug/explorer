@@ -248,7 +248,7 @@ module.exports = {
       .waitForElementVisible("//thead[contains(@class, 'table-component__table__head')]//tr[1]//th[4][contains(., 'Transactions')]")
     browser
       .getText(element, function(result) {
-        browser.expect.element(element).text.to.not.contain(result.value).after(20000);
+        browser.expect.element(element).text.to.not.contain(result.value).after(20000)
       })
   },
 
@@ -397,6 +397,17 @@ module.exports = {
     browser
       .useXpath()
       .waitForElementVisible("//div[contains(@class, 'tooltip-inner') and text() = 'Nothing matched your search']")
+  },
+
+  'it should contain a dropdown allowing to filter transactions types': function (browser) {
+    browser
+      .useXpath()
+      .waitForElementVisible("//span[contains(@class, 'mr-1') and text() = 'All']")
+      .click("//span[contains(@class, 'mr-1') and text() = 'All']")
+    browser
+      .waitForElementVisible("(//div[contains(@class, 'dropdown-button') and text() = 'Vote'])[last()]")
+      .click("(//div[contains(@class, 'dropdown-button') and text() = 'Vote'])[last()]")
+      .waitForElementVisible("//span[contains(@class, 'mr-1') and text() = 'Vote']")
     browser.end()
   }
 }

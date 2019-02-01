@@ -6,11 +6,15 @@
   "Supply": "Supply",
   "Market Cap": "Market Cap",
 
+  "The chart data could not be loaded": "The chart data could not be loaded",
+  "Reload chart": "Reload chart",
+
   "All rights reserved": "All rights reserved",
   "Version": "Version",
   "Date": "Date",
 
   "No results": "No results",
+  "This is a verified address": "This is a verified address",
 
   "Transaction": "Transaction",
   "Transactions": "Transactions",
@@ -52,7 +56,7 @@
   "Last forged": "Last forged",
   "Status": "Status",
   "Productivity": "Productivity",
-  "Approval": "Approval",
+  "Vote %": "Vote %",
   "Delegates": "Delegates",
   "Delegate": "Delegate",
   "Forged block recently": "Forged block recently",
@@ -73,6 +77,7 @@
   "Address": "Address",
   "Public key": "Public key",
   "Balance (token)": "Balance ({token})",
+  "Voting for": "Voting for",
   "Copied!": "Copied!",
   "Error!": "Error!",
   "Copy to clipboard": "Copy to clipboard",
@@ -89,7 +94,7 @@
   "All": "All",
   "Sent": "Sent",
   "Received": "Received",
-  "Second Signature enabled": "Second signature enabled",
+  "Second signature enabled": "Second signature enabled",
 
   "Previous": "Previous",
   "Next": "Next",
@@ -108,6 +113,9 @@
 
   "Ooops!": "Ooops!",
   "Sorry, page not found": "Sorry, page not found",
+  "Sorry, dataType dataId could not be found on the blockchain": "Sorry, {dataType} <b>{dataId}</b> could not be found on the blockchain",
+  "Reload this page": "Reload this page",
+  "Loading...": "Loading...",
   "Active": "Active",
   "Standby": "Standby",
   "Latest transactions and blocks": "Latest transactions and blocks",
@@ -120,6 +128,8 @@
   "Vendor field": "Vendor field",
   "Wallet summary": "Wallet summary",
 
+  "Type": "Type",
+  "Transaction type": "Transaction type",
   "2nd Signature Registration": "2nd Signature Registration",
   "Delegate Registration": "Delegate Registration",
   "Vote": "Vote",
@@ -128,5 +138,7 @@
   "IPFS": "IPFS",
   "Timelock Transfer": "Timelock Transfer",
   "Multipayment": "Multipayment",
-  "Delegate Resignation": "Delegate Resignation"
+  "Delegate Resignation": "Delegate Resignation",
+  "Second Signature": "Second Signature",
+  "Transfer": "Transfer"
 }

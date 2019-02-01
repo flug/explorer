@@ -119,5 +119,22 @@ module.exports = {
         }
       })
     browser.end()
+  },
+
+  'it should contain a dropdown allowing to filter transactions types': function (browser) {
+    const devServer = browser.globals.devServerURL + '/#/transactions/1'
+
+    browser
+      .url(devServer)
+      .assert.urlContains('/transactions/1')
+    browser
+      .useXpath()
+      .waitForElementVisible("//span[contains(@class, 'mr-1') and text() = 'All']")
+      .click("//span[contains(@class, 'mr-1') and text() = 'All']")
+    browser
+      .waitForElementVisible("(//div[contains(@class, 'dropdown-button') and text() = 'Vote'])[2]")
+      .click("(//div[contains(@class, 'dropdown-button') and text() = 'Vote'])[2]")
+      .waitForElementVisible("//span[contains(@class, 'mr-1') and text() = 'Vote']")
+    browser.end()
   }
 }

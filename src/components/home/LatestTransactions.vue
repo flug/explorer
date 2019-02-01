@@ -20,9 +20,23 @@
 import TransactionService from '@/services/transaction'
 
 export default {
+  props: {
+    transactionType: {
+      type: Number,
+      required: true
+    }
+  },
+
   data: () => ({
     transactions: null
   }),
+
+  watch: {
+    async transactionType() {
+      this.transactions = null
+      await this.getTransactions()
+    }
+  },
 
   async mounted() {
     await this.prepareComponent()
@@ -36,7 +50,7 @@ export default {
     },
 
     async getTransactions() {
-      const response = await TransactionService.latest()
+      const response = await TransactionService.filterByType(0, this.transactionType)
       this.transactions = response
     }
   }

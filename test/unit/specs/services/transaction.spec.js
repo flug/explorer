@@ -29,7 +29,7 @@ describe('Transaction Service', () => {
 
   it('should find a transaction by its id', async () => {
     const data = await transactionService.find('bd8a71caeeab36339ac5baf832bb0e150549629c1992dc749a79ff3cdcd449fc')
-    expect(Object.keys(data).sort()).toEqual(expect.arrayContaining(blockPropertyArray.concat(['height', 'votes']).sort()))
+    expect(Object.keys(data).sort()).toEqual(expect.arrayContaining(blockPropertyArray.concat(['asset', 'recipientId']).sort()))
   })
 
   it('should fail if no transaction can be found for given id', async () => {
@@ -169,5 +169,12 @@ describe('Transaction Service', () => {
     expect(data).toHaveLength(40)
     expect(Object.keys(data[0]).sort()).toEqual(expect.arrayContaining(blockPropertyArray))
     expect(data[0].timestamp < data[1].timestamp)
+  })
+
+  it('should filter the transactions and only return type 3 transactions', async() => {
+    const data = await transactionService.filterByType(1, 3)
+    expect(data).toHaveLength(25)
+    expect(Object.keys(data[0]).sort()).toEqual(expect.arrayContaining(blockPropertyArray))
+    expect(data[0].type === data[1].type)
   })
 })
