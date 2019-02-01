@@ -15,10 +15,10 @@
         <h2 class="text-white m-0 text-xl font-normal">{{ $t("Price in") }} {{ currencyName }}</h2>
         <div>
           <button @click="period('day')"  :class="{ 'chart-tab-active': type === 'day' }" class="chart-tab">{{ $t("Day") }}</button>
-          <button @click="period('week')"  :class="{ 'chart-tab-active': type === 'week' }" class="chart-tab">{{ $t("Week") }}</button>
+          <!-- <button @click="period('week')"  :class="{ 'chart-tab-active': type === 'week' }" class="chart-tab">{{ $t("Week") }}</button>
           <button @click="period('month')"  :class="{ 'chart-tab-active': type === 'month' }" class="chart-tab">{{ $t("Month") }}</button>
           <button @click="period('quarter')"  :class="{ 'chart-tab-active': type === 'quarter' }" class="chart-tab">{{ $t("Quarter") }}</button>
-          <button @click="period('year')"  :class="{ 'chart-tab-active': type === 'year' }" class="chart-tab">{{ $t("Year") }}</button>
+          <button @click="period('year')"  :class="{ 'chart-tab-active': type === 'year' }" class="chart-tab">{{ $t("Year") }}</button> -->
         </div>
       </div>
 
@@ -117,7 +117,7 @@ export default {
         mode: 'index',
         intersect: false,
         // borderWidth: 1,
-        // borderColor: '#739eff',
+        // borderColor: '#037cff',
         callbacks: {
           title: tooltipItem => {
             const name = store.getters['currency/name']
@@ -184,23 +184,46 @@ export default {
       }
     },
 
+    addDay(days) {
+      let result = new Date();
+      let dd;
+      if(days) {
+        dd = result.getDate() + days
+      } else {
+        dd = result.getDate()
+      }
+      let mm = result.getMonth()+1;
+      if(dd<10) {
+          dd = '0'+dd
+      }
+      if(mm<10) {
+          mm = '0'+mm
+      }
+      return dd + '/' + mm
+    },
+
     async renderChart(type) {
       this.isLoading = true
 
-      try {
-        const response = await CryptoCompareService[this.type]()
-        this.labels = response.labels
-        this.datasets = response.datasets
+      this.labels = [this.addDay(), this.addDay(1), this.addDay(2), this.addDay(3), this.addDay(4), this.addDay(5), this.addDay(6)]
+      this.datasets = [0.14, 0.14, 0.14, 0.14, 0.14, 0.14, 0.14]
+      this.error = null
+      this.isLoading = false
 
-        this.error = null
-      } catch(error) {
-        this.labels = []
-        this.datasets = []
+      // try {
+      //   const response = await CryptoCompareService[this.type]()
+      //   this.labels = response.labels
+      //   this.datasets = response.datasets
 
-        this.error = error
-      } finally {
-        this.isLoading = false
-      }
+      //   this.error = null
+      // } catch(error) {
+      //   this.labels = []
+      //   this.datasets = []
+
+      //   this.error = error
+      // } finally {
+      //   this.isLoading = false
+      // }
     },
 
     watchCurrencyName() {
