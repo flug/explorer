@@ -1,8 +1,14 @@
 <template>
   <main :class="[
     nightMode ? 'theme-dark' : 'theme-light',
-    'bg-theme-page-background text-theme-text-content min-h-screen font-sans xl:pt-8'
+    'bg-theme-page-background text-theme-text-content min-h-screen font-sans'
   ]">
+    <!-- Custom top message -->
+    <div style="padding: 15px; width: 100%; height: 52px; text-align: center; display: flex; align-items: center; justify-content: center; color: #ffffff; background-color: #292929;">
+      <span>
+        This is the devnet of the Ki Blockchain, this version is only a preview of what will be released for the mainnet.
+      </span>
+    </div>
     <app-header></app-header>
 
     <router-view></router-view>

@@ -124,7 +124,7 @@ If you discover a security vulnerability within this package, please send an e-m
 ## Credits
 
 
-* Genki Team:
+* Ki Foundation Team:
 
 - [Reda Berrehili](https://github.com/berrehili)
 - [Tarek Awwad](https://github.com/TarekAwwad)
@@ -138,4 +138,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [Genki](https://gen.ki) © [ArkEcosystem](https://ark.io)
+[MIT](LICENSE) © [Genki](https://foundation.ki) © [ArkEcosystem](https://ark.io)

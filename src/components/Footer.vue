@@ -2,10 +2,10 @@
   <footer class="max-w-2xl mx-auto px-5 md:px-10 py-8 text-theme-text-tertiary flex flex-col lg:flex-row flex-wrap justify-between items-center">
     <div class="mb-4 lg:mb-0 text-center md:text-left">
       <!-- <span class="block md:inline-block mb-4 md:mb-0 text-center">&copy; <a href="https://ark.io" target="_blank">Ark.io</a> | {{ year }}. {{ $t("All rights reserved") }}</span> <div class="block md:inline-block"><span class="hidden md:inline-block"> | </span> <span>{{ $t("Version") }}: <a :href="versionLink" target="_blank">{{ version }}</a> | {{ $t("Date") }}: {{ date }}</span></div> -->
-      <span class="block md:inline-block mb-4 md:mb-0 text-center">&copy; <a href="https://gen.ki" target="_blank">Gen.ki</a> | {{ year }}. {{ $t("All rights reserved") }}</span> <div class="block md:inline-block"><span class="hidden md:inline-block"> | </span> <span>{{ $t("Version") }}: <a :href="versionLink" target="_blank">0.1.0</a> | {{ $t("Date") }}: {{ date }}</span></div>
+      <span class="block md:inline-block mb-4 md:mb-0 text-center">&copy; <a href="https://foundation.ki" target="_blank">Foundation.ki</a> | {{ year }}. {{ $t("All rights reserved") }}</span> <div class="block md:inline-block"><span class="hidden md:inline-block"> | </span> <span>{{ $t("Version") }}: <a :href="versionLink" target="_blank">0.1.0</a> | {{ $t("Date") }}: {{ date }}</span></div>
     </div>
     <div class="text-center">
-      <a href="https://www.facebook.com/getgenki/" target="_blank">
+      <!-- <a href="https://www.facebook.com/getgenki/" target="_blank">
         <svg
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -14,9 +14,9 @@
           class="m-2">
           <path fill-rule="evenodd" fill="currentColor" d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0"/>
         </svg>
-      </a>
+      </a> -->
 
-      <a href="https://twitter.com/JoinGenki" target="_blank">
+      <a href="https://twitter.com/Ki_Foundation" target="_blank">
         <svg
           viewBox="0 0 24 24"
           class="m-2"
@@ -27,7 +27,7 @@
         </svg>
       </a>
 
-      <a href="mailto:contact@gen.ki" target="_blank">
+      <!-- <a href="mailto:contact@gen.ki" target="_blank">
         <svg
           viewBox="0 0 24 24"
           class="m-2"
@@ -36,9 +36,9 @@
           width="16px" height="16px">
           <path fill-rule="evenodd" fill="currentColor" d="M12,0C5.4,0,0,5.4,0,12c0,6.6,5.4,12,12,12c2.3,0,4.6-0.7,6.6-1.9c0.6-0.4,0.7-1.2,0.3-1.7l-0.5-0.6c-0.4-0.5-1-0.6-1.5-0.2 c-1.4,0.9-3.1,1.4-4.8,1.4c-4.9,0-8.9-4-8.9-8.9s4-8.9,8.9-8.9c4.8,0,8.9,2.8,8.9,7.7c0,1.9-1,3.9-2.8,4c-0.8,0-0.8-0.6-0.7-1.5 l1.1-5.9c0.1-0.7-0.4-1.4-1.1-1.4h-2.2c-0.3,0-0.6,0.2-0.6,0.6l0,0c-0.7-0.9-2-1.1-2.9-1.1c-3.6,0-6.7,3-6.7,7.3 c0,3.2,1.8,5.1,4.6,5.1c1.3,0,2.8-0.8,3.6-1.9c0.5,1.7,2,1.7,3.4,1.7c5.3,0,7.3-3.5,7.3-7.1C24,4.2,18.7,0,12,0z M11,14.7 c-1.1,0-1.7-0.8-1.7-2c0-2.2,1.5-3.5,2.8-3.5c1.1,0,1.7,0.7,1.7,2C13.8,13.4,12.1,14.7,11,14.7L11,14.7z"/>
         </svg>
-      </a>
+      </a> -->
 
-      <a href="https://t.me/HeyGenki" target="_blank">
+      <a href="https://t.me/KiFoundation" target="_blank">
         <svg
           viewBox="0 0 14 14"
           class="m-2"
@@ -49,7 +49,7 @@
         </svg>
       </a>
 
-      <a href="https://www.reddit.com/user/heygenki" target="_blank">
+      <a href="https://www.reddit.com/user/Ki_Foundation" target="_blank">
         <svg
           viewBox="0 0 17 17"
           class="m-2"
@@ -60,7 +60,7 @@
         </svg>
       </a>
 
-      <a href="https://github.com/GetGenki" target="_blank">
+      <a href="https://github.com/KiFoundation" target="_blank">
         <svg
           viewBox="0 0 24 24"
           class="m-2"
@@ -114,7 +114,7 @@
         </svg>
       </a> -->
 
-      <a href="https://steemit.com/@heygenki" target="_blank">
+      <!-- <a href="https://steemit.com/@heygenki" target="_blank">
         <svg
           viewBox="0 0 24 24"
           class="m-2"
@@ -123,9 +123,12 @@
           width="16px" height="16px">
           <path fill-rule="evenodd" fill="currentColor" d="M3.927 2.596c.264.045-.397 1.778-.028 3.76.318 1.697 4.313 8.275 4.148 10.529-.128 1.418-3.408 4.74-3.753 4.52-.377-.105.996-2.361.486-4.244C4.19 14.97.673 9.301.677 6.798c0-1.832 3.011-4.32 3.25-4.202zM11.44.005c.336.058-.506 2.271-.034 4.791.405 2.17 5.501 10.555 5.292 13.432-.166 1.809-4.348 6.043-4.789 5.76-.479-.131 1.271-3.008.622-5.406-.755-2.796-5.238-10.026-5.235-13.218 0-2.338 3.842-5.509 4.144-5.359zm7.754 2.591c.27.045-.393 1.778-.023 3.761.318 1.697 4.313 8.275 4.148 10.529-.125 1.418-3.408 4.74-3.754 4.52-.377-.105.996-2.361.488-4.244-.594-2.192-4.11-7.861-4.105-10.363 0-1.832 3.014-4.32 3.248-4.202h-.002z" />
         </svg>
+      </a>-->
+      <a href="https://www.linkedin.com/company/27222045/admin/" target="_blank">
+        <svg class="m-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16px" height="16px" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
       </a>
 
-      <a href="https://medium.com/@genki" target="_blank">
+      <a href="https://medium.com/@ki_foundation" target="_blank">
         <svg
           viewBox="0 0 24 24"
           class="m-2"
