@@ -1,34 +1,58 @@
 <template>
   <div class="relative">
-    <div v-if="hasError" class="absolute pin flex flex-col items-center justify-center text-white z-10">
+    <div
+      v-if="hasError"
+      class="absolute pin flex flex-col items-center justify-center text-white z-10"
+    >
       <p class="mb-4">
         {{ $t('The chart data could not be loaded') }}
       </p>
-      <button @click="renderChart" :disabled="isLoading" class="mt-4 pager-button items-center">
-        <span>{{ !isLoading ? $t('Reload chart') : $t('Loading...') }}</span>
+      <button
+        :disabled="isLoading"
+        class="mt-4 pager-button items-center"
+        @click="renderChart()"
+      >
+        <span v-if="!isLoading">{{ $t('Reload chart') }}</span>
+        <Loader
+          v-else
+          :data="null"
+        />
       </button>
     </div>
 
-    <div :key="componentKey" :class="{ 'blur': hasError }">
-
+    <div
+      :key="componentKey"
+      :class="{ 'blur': hasError }"
+    >
       <div class="flex justify-between items-center px-10 py-8">
-        <h2 class="text-white m-0 text-xl font-normal">{{ $t("Price in") }} {{ currencyName }}</h2>
+        <h2 class="text-white m-0 text-xl font-normal">
+          {{ $t("Price in") }} {{ currencyName }}
+        </h2>
         <div>
-          <button @click="period('day')"  :class="{ 'chart-tab-active': type === 'day' }" class="chart-tab">{{ $t("Day") }}</button>
-          <!-- <button @click="period('week')"  :class="{ 'chart-tab-active': type === 'week' }" class="chart-tab">{{ $t("Week") }}</button>
-          <button @click="period('month')"  :class="{ 'chart-tab-active': type === 'month' }" class="chart-tab">{{ $t("Month") }}</button>
-          <button @click="period('quarter')"  :class="{ 'chart-tab-active': type === 'quarter' }" class="chart-tab">{{ $t("Quarter") }}</button>
-          <button @click="period('year')"  :class="{ 'chart-tab-active': type === 'year' }" class="chart-tab">{{ $t("Year") }}</button> -->
+          <!--<template v-for="period in ['day', 'week', 'month', 'quarter', 'year']">-->
+          <template v-for="period in ['day']">
+            <button
+              :key="period"
+              :class="{ 'chart-tab-active': currentPeriod === period }"
+              class="chart-tab"
+              @click="setPeriod(period)"
+            >
+              {{ $t(capitalize(period)) }}
+            </button>
+          </template>
         </div>
       </div>
 
-      <price-chart :chartData="chartData" :options="options" :height="314"></price-chart>
+      <PriceChart
+        :chart-data="chartData"
+        :options="options"
+        :height="314"
+      />
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-import CryptoCompareService from '@/services/crypto-compare'
 import PriceChart from '@/components/charts/price-chart'
 import { mapGetters } from 'vuex'
 import store from '@/store'
@@ -41,7 +65,6 @@ export default {
   data: () => ({
     error: null,
     isLoading: false,
-    type: 'day',
     componentKey: 0,
     labels: [],
     datasets: [],
@@ -50,21 +73,21 @@ export default {
       responsive: true,
       maintainAspectRatio: false,
       hover: {
-          intersect: false
+        intersect: false
       },
       animation: {
-          duration: 0
+        duration: 0
       },
       responsiveAnimationDuration: 0,
       legend: {
-        display: false,
+        display: false
       },
       layout: {
         padding: {
           left: 50,
           right: 50,
           top: 0,
-          bottom: 50,
+          bottom: 50
         }
       },
       scales: {
@@ -82,31 +105,32 @@ export default {
                 return store.getters['currency/symbol'] + value.toFixed(2)
               },
               fontColor: '#838a9b',
-              fontSize: 13,
+              fontSize: 13
             },
             gridLines: {
-              color: '#282b38',
-            },
-          },
+              color: '#282b38'
+            }
+          }
         ],
         xAxes: [
           {
             gridLines: {
               display: true,
-              color: '#282b38',
+              color: '#282b38'
             },
             ticks: {
               fontColor: '#838a9b',
-              fontSize: 13,
-            },
-          },
-        ],
+              fontSize: 13
+            }
+          }
+        ]
       },
       tooltips: {
         backgroundColor: '#272936',
         titleFontStyle: 'normal',
         titleFontSize: 18,
-        bodyFontFamily: "'Proxima Nova', sans-serif",
+        titleFontFamily: "'Proxima Nova Regular', sans-serif",
+        titleMarginBottom: 0,
         cornerRadius: 3,
         bodyFontColor: '#838a9b',
         bodyFontSize: 14,
@@ -139,8 +163,9 @@ export default {
   computed: {
     ...mapGetters('currency', { currencyName: 'name' }),
     ...mapGetters('network', ['token']),
+    ...mapGetters('ui', { currentPeriod: 'priceChartPeriod' }),
 
-    chartData() {
+    chartData () {
       return {
         labels: this.labels,
         datasets: [{
@@ -158,51 +183,54 @@ export default {
       }
     },
 
-    hasError() {
+    hasError () {
       return !!this.error
     }
   },
 
-  mounted() {
+  watch: {
+    token () {
+      this.renderChart()
+    },
+
+    currencyName () {
+      this.renderChart()
+    }
+  },
+
+  mounted () {
     window.addEventListener('resize', this.handleResize)
-    this.prepareComponent()
+    this.renderChart()
   },
 
   methods: {
-    prepareComponent() {
-      this.renderChart()
+    setPeriod (period) {
+      this.$store.dispatch('ui/setPriceChartPeriod', period)
 
-      this.watchCurrencyName()
-      this.watchNetworkToken()
-    },
-
-    period(type) {
-      this.type = type
-
-      if (!!this.token) {
+      if (this.token) {
         this.renderChart()
       }
     },
 
-    addDay(days) {
-      let result = new Date();
-      let dd;
-      if(days) {
+    addDay (days) {
+      let result = new Date()
+      let dd
+      if (days) {
         dd = result.getDate() + days
       } else {
         dd = result.getDate()
       }
-      let mm = result.getMonth()+1;
-      if(dd<10) {
-          dd = '0'+dd
+      let mm = result.getMonth() + 1
+      if (dd < 10) {
+        dd = '0' + dd
       }
-      if(mm<10) {
-          mm = '0'+mm
+      if (mm < 10) {
+        mm = '0' + mm
       }
       return dd + '/' + mm
     },
 
-    async renderChart(type) {
+    async renderChart (type) {
       this.isLoading = true
 
       this.labels = [this.addDay(), this.addDay(1), this.addDay(2), this.addDay(3), this.addDay(4), this.addDay(5), this.addDay(6)]
@@ -226,19 +254,11 @@ export default {
       // }
     },
 
-    watchCurrencyName() {
-      this.$store.watch((state) => state.currency.name, (value) => this.renderChart())
-    },
-
-    watchNetworkToken() {
-      this.$store.watch((state) => state.network.token, (value) => this.renderChart())
-    },
-
-    handleResize() {
+    handleResize () {
       // trick to re-mount the chart on resize
       // https://stackoverflow.com/questions/47459837/how-to-re-mount-a-component
       this.componentKey++
-    },
+    }
   }
 }
 </script>

@@ -53,7 +53,7 @@
   "Last forged": "Laatst Geforged",
   "Status": "Status",
   "Productivity": "Productiviteit",
-  "Vote %": "Stem %",
+  "Percentage of the total supply": "Percentage van de totale voorraad",
   "Delegates": "Afgevaardigden",
   "Delegate": "Afgevaardigde",
   "Forged block recently": "Recentelijk block geforged",
@@ -65,9 +65,7 @@
   "Total forged (token)": "Totaal geforged ({token})",
   "Forging": "Aan het forgen",
   "Missing": "Missend",
-  "Missed block, awaiting slot": "Block gemist, Wachten op plek",
   "Not forging": "Niet aan het forgen",
-  "Awaiting slot": "Wachten op een plek",
   "Never": "Nooit",
   "Last block at height on": "Last block @ {height} on",
 

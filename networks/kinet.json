@@ -1,15 +1,16 @@
 {
     "title": "Kinet Explorer",
-    "server": "http://167.114.236.26:4003/api",
-    "alias": "KINET",
+    "server": "http://167.114.236.26:4003/api/v2",
+    "alias": "Kinet",
     "activeDelegates": 51,
     "rewardOffset": 75600,
     "currencies": [],
     "knownWallets": {},
     "defaults": {
-        "currency": null
-    },
-    "config": {
-        "priceChart": false
+        "token": "DKI",
+        "symbol": "DҜ",
+        "currency": null,
+        "priceChart": false,
+        "priceChartPeriod": "day"
     }
 }
