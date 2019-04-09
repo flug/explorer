@@ -1,6 +1,6 @@
 {
     "title": "Kinet Explorer",
-    "server": "http://167.114.236.26:4003/api/v2",
+    "server": "http://167.114.240.22:4003/api/v2",
     "alias": "Kinet",
     "activeDelegates": 51,
     "rewardOffset": 75600,
