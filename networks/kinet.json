@@ -9,7 +9,10 @@
     "defaults": {
         "token": "DKI",
         "symbol": "DҜ",
-        "currency": null,
+        "currency": {
+            "name": "USD",
+            "symbol": "$"
+        },
         "priceChart": false,
         "priceChartPeriod": "day"
     }

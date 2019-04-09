@@ -74,6 +74,12 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'HeaderMenuMobile',
 
+  methods: {
+    closeMenu () {
+      this.$store.dispatch('ui/setMenuVisible', false)
+    }
+  },
+
   computed: {
     ...mapGetters('ui', ['nightMode'])
   }
