@@ -46,6 +46,39 @@ yarn build:devnet
 yarn build --network my-custom-network
 ```
 
+### From docker
+
+Build :
+
+```bash
+
+docker build -t explorer -f docker/node/Dockerfile .
+
+```
+Run :
+
+```bash
+
+ docker run -p 8080:8080 -it explorer
+
+ ```
+
+### From Docker-compose
+
+```bash
+
+version: '3.2'
+
+services:
+  explorer:
+    build:
+      context: .
+      dockerfile: docker/node/Dockerfile
+    ports:
+      - '8080:8080'
+
+ ```
+
 #### 3.4 GitHub Pages
 
 If you are going to host your explorer instance on GitHub Pages you will need to specify your base url in most cases as GitHub Pages serves repositories from sub-directories instead of sub-domains.
